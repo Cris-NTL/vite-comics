@@ -93,9 +93,13 @@ export default {
 
 <template>
     <div class="container">
+        <button class="current">CURRENT SERIES</button>
+
         <div class="row">
             <AppCards v-for="card in arrayCards" :thumb="card" :key="card.series" />
         </div>
+
+        <button class="load">LOAD MORE</button>
     </div>
 </template>
 
@@ -107,12 +111,35 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
     background-color: black;
+}
+
+button {
+    display: inline-block;
+    color: white;
+    background-color: #0282f9;
+    font-weight: bolder;
+    margin-top: 20px;
+    border: none;
+    padding: 8px 30px;
+
+    &.current {
+        position: absolute;
+        left: 15%;
+        top: -40px;
+    }
+
+    &.load {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 10px;
+    }
 }
 
 .row {
     width: 70%;
     display: flex;
     flex-wrap: wrap;
-}
-</style>
+    margin-top: 10px;
+}</style>

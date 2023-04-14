@@ -20,7 +20,6 @@ export default {
 <style scoped lang="scss">
 .card {
     width: calc((100% / 6) - 30px);
-    box-sizing: border-box;
     margin: 20px 15px;
     display: flex;
     flex-direction: column;
@@ -34,7 +33,6 @@ export default {
     & .card-image {
         width: 100%;
         padding-top: 100%;
-        overflow: hidden;
         position: relative;
 
         & img {
@@ -44,7 +42,6 @@ export default {
             object-position: top;
             position: absolute;
             top: 0;
-            left: 0;
         }
     }
 

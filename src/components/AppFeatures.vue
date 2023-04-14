@@ -1,6 +1,39 @@
 <script>
 export default {
     name: 'AppFeatures',
+
+    data() {
+        return {
+            features: [
+                {
+                    img: 'buy-comics-digital-comics.png',
+                    description: 'Digital comics',
+                },
+                {
+                    img: 'buy-comics-merchandise.png',
+                    description: 'DC merchandise',
+                },
+                {
+                    img: 'buy-comics-subscriptions.png',
+                    description: 'Subscription',
+                },
+                {
+                    img: 'buy-comics-shop-locator.png',
+                    description: 'Comic shop locator',
+                },
+                {
+                    img: 'buy-dc-power-visa.svg',
+                    description: 'DC power visa',
+                }
+            ]
+        }
+    },
+
+    methods: {
+        getImagePath(img) {
+            return new URL(`../assets/img/${img}`, import.meta.url).href;
+        }
+    }
 }
 </script>
 
@@ -8,25 +41,9 @@ export default {
     <div class="container">
         <div class="nav">
             <ul>
-                <li>
-                    <img src="../assets/img/buy-comics-digital-comics.png" alt="digitalComics">
-                    <span>Digital comics</span>
-                </li>
-                <li>
-                    <img src="../assets/img/buy-comics-merchandise.png" alt="merchandaise">
-                    <span>DC merchandise</span>
-                </li>
-                <li>
-                    <img src="../assets/img/buy-comics-subscriptions.png" alt="comicsSubscriptions">
-                    <span>subscription</span>
-                </li>
-                <li>
-                    <img src="../assets/img/buy-comics-shop-locator.png" alt="shopLocator">
-                    <span>Comic shop locator</span>
-                </li>
-                <li>
-                    <img src="../assets/img/buy-dc-power-visa.svg" alt="buyVisa">
-                    <span>DC power visa</span>
+                <li v-for="(feature, index) in features" :key="index">
+                    <img :src="getImagePath(feature.img)" :alt="feature.description">
+                    <span>{{ feature.description }}</span>
                 </li>
             </ul>
         </div>
@@ -39,7 +56,7 @@ export default {
 .container {
     width: 100%;
     height: 150px;
-    background-color: lightblue;
+    background-color: #0282f9;
     display: flex;
     justify-content: center;
 }
@@ -58,9 +75,12 @@ ul {
 li {
     display: flex;
     align-items: center;
+    color: white;
+    margin-right: 40px;
 }
 
 img {
     width: 50px;
+    margin-right: 10px;
 }
 </style>

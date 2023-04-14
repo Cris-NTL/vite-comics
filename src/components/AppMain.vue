@@ -50,13 +50,13 @@ export default {
                 {
                     thumb: 'https://static.wikia.nocookie.net/marvel_dc/images/0/0d/Batman_Superman_Vol_1_1.jpg',
                     price: '$3.99',
-                    series: 'Batman/Superman',
+                    series: 'Batman / Superman',
                     type: 'comic book',
                 },
                 {
                     thumb: 'https://static.wikia.nocookie.net/marvel_dc/images/c/cf/Batman_Superman_Annual_Vol_2_1.jpg',
                     price: '$4.99',
-                    series: 'Batman/Superman Annual',
+                    series: 'Batman / Superman Annual',
                     type: 'comic book',
                 },
                 {
@@ -114,7 +114,5 @@ export default {
     width: 70%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0 auto;
 }
 </style>

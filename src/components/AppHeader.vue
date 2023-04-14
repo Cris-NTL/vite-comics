@@ -6,43 +6,53 @@ export default {
             categories: [
                 {
                     name: "Characters",
-                    url: "#"
+                    url: "#",
+                    current: false
                 },
                 {
                     name: "Comics",
-                    url: "#"
+                    url: "#",
+                    current: true
                 },
                 {
                     name: "Movies",
-                    url: "#"
+                    url: "#",
+                    current: false
                 },
                 {
                     name: "TV",
-                    url: "#"
+                    url: "#",
+                    current: false
                 },
                 {
                     name: "Games",
-                    url: "#"
+                    url: "#",
+                    current: false
                 },
                 {
                     name: "Collectibles",
-                    url: "#"
+                    url: "#",
+                    current: false
                 },
                 {
                     name: "Videos",
-                    url: "#"
+                    url: "#",
+                    current: false
                 },
                 {
                     name: "Fans",
-                    url: "#"
+                    url: "#",
+                    current: false
                 },
                 {
                     name: "News",
-                    url: "#"
+                    url: "#",
+                    current: false
                 },
                 {
                     name: "Shop",
-                    url: "#"
+                    url: "#",
+                    current: false
                 },
             ],
         };
@@ -58,7 +68,11 @@ export default {
             </div>
             <nav>
                 <ul>
-                    <li v-for="name in categories"><a href="#">{{ name.name }}</a></li>
+                    <li v-for="(link, index) in categories" :key="index">
+                        <a :href="link.url" :class="{ active: link.current }">
+                            {{ link.name }}
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -67,6 +81,7 @@ export default {
 
 <style lang="scss" scoped>
 @use "../style/general.scss" as *;
+
 .container {
     width: 100%;
     height: 80px;
@@ -94,5 +109,14 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+li {
+    border-bottom: 6px solid transparent;
+
+    &:hover,
+    &.active {
+        border-bottom: 6px solid #0282f9;
+    }
 }
 </style>

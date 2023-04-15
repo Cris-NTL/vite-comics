@@ -24,9 +24,9 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
 
     & h4 {
-        margin-top: 10px;
         color: white;
     }
 

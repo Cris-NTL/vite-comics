@@ -52,35 +52,7 @@ export default {
 
 <style lang="scss" scoped>
 @use "../style/general.scss" as *;
+@use "../style/app-features.scss" as *;
 
-.container {
-    width: 100%;
-    height: 150px;
-    background-color: #0282f9;
-    display: flex;
-    justify-content: center;
-}
 
-.nav {
-    display: flex;
-    justify-content: center;
-}
-
-ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-li {
-    display: flex;
-    align-items: center;
-    color: white;
-    margin-right: 40px;
-}
-
-img {
-    width: 50px;
-    margin-right: 10px;
-}
 </style>

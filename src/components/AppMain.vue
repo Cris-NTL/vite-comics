@@ -105,41 +105,6 @@ export default {
 
 <style lang="scss" scoped>
 @use "../style/general.scss" as *;
+@use "../style/app-main.scss" as *;
 
-.container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-    background-color: black;
-}
-
-button {
-    display: inline-block;
-    color: white;
-    background-color: #0282f9;
-    font-weight: bolder;
-    margin-top: 20px;
-    border: none;
-    padding: 8px 30px;
-
-    &.current {
-        position: absolute;
-        left: 15%;
-        top: -40px;
-    }
-
-    &.load {
-        position: absolute;
-        bottom: 0;
-        margin-bottom: 10px;
-    }
-}
-
-.row {
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}</style>
+</style>

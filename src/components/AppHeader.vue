@@ -81,42 +81,5 @@ export default {
 
 <style lang="scss" scoped>
 @use "../style/general.scss" as *;
-
-.container {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-}
-
-.wrap {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-img {
-    width: 40px;
-}
-
-nav {
-    width: 70%;
-
-}
-
-ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-li {
-    border-bottom: 6px solid transparent;
-
-    &:hover,
-    &.active {
-        border-bottom: 6px solid #0282f9;
-    }
-}
+@use "../style/app-header" as *;
 </style>

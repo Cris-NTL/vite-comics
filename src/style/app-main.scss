@@ -1,16 +1,18 @@
+@use './colors' as c;
+
 .container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-    background-color: black;
+    background-color: c.$background-color;
 }
 
 button {
     display: inline-block;
-    color: white;
-    background-color: #0282f9;
+    color: c.$secondary-color;
+    background-color: c.$primary-color;
     font-weight: bolder;
     margin-top: 20px;
     border: none;

@@ -57,12 +57,12 @@ export default {
             </div>
         </div>
 
-        <div class="">
-            <div>
+        <div class="bottom-container">
+            <div class="bottom-left">
 
             </div>
 
-            <div>
+            <div class="bottom-right">
 
             </div>
         </div>

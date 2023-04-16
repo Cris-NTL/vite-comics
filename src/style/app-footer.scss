@@ -12,7 +12,7 @@
         justify-content: space-between;
 
         .left-side {
-            width: 45%;
+            width: 35%;
             display: flex;
             color: c.$secondary-color;
             justify-content: space-between;
@@ -22,8 +22,12 @@
         .right-side {
             position: absolute;
             right: 75px;
-            top: 865px;
-            width: 45%;
+            top: 900px;
+            width: 50%;
+        }
+
+        & img {
+            width: 70%;
         }
     }
 

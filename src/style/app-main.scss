@@ -7,34 +7,34 @@
     justify-content: center;
     position: relative;
     background-color: c.$background-color;
-}
 
-button {
-    display: inline-block;
-    color: c.$secondary-color;
-    background-color: c.$primary-color;
-    font-weight: bolder;
-    margin-top: 20px;
-    border: none;
-    padding: 8px 30px;
-    cursor: pointer;
+    button {
+        display: inline-block;
+        color: c.$secondary-color;
+        background-color: c.$primary-color;
+        font-weight: bolder;
+        margin-top: 20px;
+        border: none;
+        padding: 8px 30px;
+        cursor: pointer;
 
-    &.current {
-        position: absolute;
-        left: 15%;
-        top: -40px;
+        &.current {
+            position: absolute;
+            left: 15%;
+            top: -40px;
+        }
+
+        &.load {
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 10px;
+        }
     }
 
-    &.load {
-        position: absolute;
-        bottom: 0;
-        margin-bottom: 10px;
+    .row {
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
     }
-}
-
-.row {
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 10px;
 }
